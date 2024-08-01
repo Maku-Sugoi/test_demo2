@@ -1,0 +1,42 @@
+import java.util.Scanner;
+import java.util.ArrayList;
+
+
+public class LacanariaLab4num1
+{
+   public static void main(String[]args)
+   {
+        Scanner cs=new Scanner(System.in);
+       ArrayList countryOne = new ArrayList();
+       ArrayList countryTwo = new ArrayList();
+       
+       
+       System.out.print("Enter the number of country 1: ");
+       int c1=cs.nextInt();
+       System.out.println("Enter the name of your chosen countries: ");
+       for(int i = 0; i < c1; i++)
+       {
+           countryOne.add(cs.next());
+       }
+       
+       
+       System.out.println("country 1: ");
+       
+       System.out.print(countryOne.toString().replace("[","").replace("]",""));
+        System.out.println();
+       System.out.print("Enter the number of country 2: ");
+       int c2 = cs.nextInt();
+        for(int i = 0; i < c2; i++)
+       {
+           countryTwo.add(cs.next());
+       }
+       
+       System.out.println("country 2: ");
+       System.out.print(countryTwo.toString().replace("[","").replace("]",""));
+       
+       
+       countryOne.retainAll(countryTwo);
+       System.out.println();
+       System.out.println("common elements: " + countryOne.toString().replace("[","").replace("]",""));
+   }
+}   
